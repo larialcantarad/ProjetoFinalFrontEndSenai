@@ -35,7 +35,7 @@ Nathalia Duarte, Larissa Alcantara e  Mayara Cabral
 
 <br>
 
-## Roando o projeto:
+## Rodando o projeto:
 A o baixar o projeto dê um "npm install" dentro da pasta.
 Para rodar a aplicação utilize o comando:
 "npm start"
