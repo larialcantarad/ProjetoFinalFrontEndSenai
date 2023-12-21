@@ -15,7 +15,7 @@ import {
 const items = [
   {
 
-    src : 'public/t.png',
+    src : '/public/t.png',
     altText: '',
   
     
@@ -24,14 +24,14 @@ const items = [
   },
   {
    
-    src: 'public/t2.jpg',
+    src: '/public/t2.jpg',
     altText: '',
     caption: '',
     key: 2,
   },
   {
    
-    src: 'public/E2.jpg',
+    src: '/public/E2.jpg',
     altText: '',
     caption: '',
     key: 3,
