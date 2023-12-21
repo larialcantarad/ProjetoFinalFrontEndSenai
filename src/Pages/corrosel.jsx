@@ -15,7 +15,7 @@ import {
 const items = [
   {
 
-    src : '../../../public/t.png',
+    src : 'public/t.png',
     altText: '',
   
     
