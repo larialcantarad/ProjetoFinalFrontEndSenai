@@ -11,7 +11,7 @@ function carrinho(){
         <> 
         <Menu />
         <div className= 'form-cantainer'>
-            
+            <h2> Seu Carrinho: </h2>
             <h3>Seu carrinho está vazio</h3>
              
         </div>  
