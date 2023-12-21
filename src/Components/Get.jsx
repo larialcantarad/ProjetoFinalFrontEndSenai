@@ -10,7 +10,7 @@ function container (){
     const navigat = useNavigate()    
 
         useEffect(() => {
-            axios.get("http://localhost:3000/usuarios")
+            axios.get("https://bd-user-qimz.onrender.com/usuarios")
             .then(res => setValor(res.data))
             .catch(err => console.log(err))
         })
@@ -43,8 +43,14 @@ function container (){
                         <td>{d.cor}</td>
                         <td> <img className="fto" src={d.foto}  /> </td>
                         <td>
-                        <Link to={`/update/${d.id}`} className="btn btn-primary">Atualizar</Link>
-                        <button onClick={e => hardSubmit(d.id)} className='btn btn-sm ms-1 btn-danger' >Excluir</button>
+                        <div className = "botoes">
+                            <div>
+                                <Link to={`/update/${d.id}`} className="btn btn-sm ms-1 btn-success">Atualizar</Link>
+                            </div>
+                            <div>
+                                <button onClick={e => hardSubmit(d.id)} className='btn btn-sm ms-1 btn-danger' >Excluir</button>
+                            </div>
+                        </div>
                        
                         </td>
                     </tr>

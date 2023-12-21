@@ -10,7 +10,7 @@ function container2 (){
     const navigat = useNavigate()    
 
         useEffect(() => {
-            axios.get("http://localhost:3000/usuarios2")
+            axios.get("hhttps://bd-user-qimz.onrender.com/usuarios2")
             .then(res => setValor(res.data))
             .catch(err => console.log(err))
         })
