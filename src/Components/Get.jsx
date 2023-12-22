@@ -43,6 +43,7 @@ function container (){
                         <td>{d.cor}</td>
                         <td> <img className="fto" src={d.foto}  /> </td>
                         <td>
+<<<<<<< HEAD
                         <div className = "botoes">
                             <div>
                                 <Link to={`/update/${d.id}`} className="btn btn-sm ms-1 btn-success">Atualizar</Link>
@@ -51,6 +52,16 @@ function container (){
                                 <button onClick={e => hardSubmit(d.id)} className='btn btn-sm ms-1 btn-danger' >Excluir</button>
                             </div>
                         </div>
+=======
+                            <div className = "botoes">
+                                <div>
+                                    <Link to={`/update/${d.id}`} className="btn btn-sm ms-1 btn-success">Atualizar</Link>
+                                </div>
+                                <div>
+                                    <button onClick={e => hardSubmit(d.id)} className='btn btn-sm ms-1 btn-danger' >Excluir</button>
+                                </div>
+                            </div>
+>>>>>>> 17c72fd028415cd112c06ac359aeb1b78a263780
                        
                         </td>
                     </tr>
