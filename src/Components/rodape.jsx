@@ -10,7 +10,7 @@ function rodape (){
         <>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">Front-End - SENAI - Maracanã</Navbar.Brand>
+          <Navbar.Brand className = "centro" href="#home">Front-End - SENAI - Maracanã</Navbar.Brand>
           
         </Container>
       </Navbar>

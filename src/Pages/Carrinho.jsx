@@ -25,7 +25,7 @@ console.log(res)
         .then(res => setData(res.data))
         .catch(err => console.log(err))
     },[])
-
+    
  
     
 
@@ -70,6 +70,8 @@ console.log(res)
                                     
         </div>  
         <Link to="../Pages/pagamento" className='btn btn-dark'>Comprar</Link>
+
+        
         
         </div>
         

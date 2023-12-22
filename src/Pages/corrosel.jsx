@@ -15,7 +15,7 @@ import {
 const items = [
   {
 
-    src : '../../../public/t.png',
+    src : 'https://mamo.vteximg.com.br/arquivos/ids/391519/desk1212cele.jpg?v=638385044820900000',
     altText: '',
   
     
@@ -24,14 +24,14 @@ const items = [
   },
   {
    
-    src: '../../../public/t2.jpg',
+    src: 'https://kimika.com.br/uploads/destaque_arquivo/20231201082420_bannerveraovivalavida.jpg',
     altText: '',
     caption: '',
     key: 2,
   },
   {
    
-    src: '../../../public/E2.jpg',
+    src: 'https://s3.amazonaws.com/fatobasico.com.br/convertr/slider/c_pia_de_novidades_20231222_085006_0000.jpg',
     altText: '',
     caption: '',
     key: 3,

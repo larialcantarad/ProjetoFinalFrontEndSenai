@@ -23,8 +23,8 @@ function inicial2() {
     {
       valor.map((d, i) => (
     
-            <Card key={i} style={{ width: '230px' }}>
-            <Card.Img variant="top" src={d.foto} style={{ width: "230px", height: "230px" }}/>
+            <Card key={i} style={{ width: '240px' }}>
+            <Card.Img variant="top" src={d.foto} style={{ width: "240px", height: "240px" }}/>
             <Card.Body>
             <Card.Title style={{ fontSize: "25px" }}></Card.Title>
             <Card.Text>
