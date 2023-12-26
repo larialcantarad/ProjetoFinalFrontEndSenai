@@ -14,7 +14,7 @@ function inicial2() {
             axios.get("https://bd-user-qimz.onrender.com/usuarios2")
             .then(res => setValor(res.data))
             .catch(err => console.log(err))
-        })
+        },[])
 
   return (
     <div className='mud1'>

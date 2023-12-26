@@ -3,10 +3,23 @@ import '../Components/style.css'
 import Rodape from '../Components/rodape'
 import Get from '../Components/Get'
 import '././carrinho.css'
+import axios from "axios"
+import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 
 
 function contato(){
+    const [inputData, setInputData] = useState({produto: '', valor: '', tamanho: ' ' , cor: ' ' ,foto: ''})
+    const navigate = useNavigate()
+
+
+    function enviar(event){
+        alert("mensagem enviada com sucesso!")
+        navigate('/')
+
+    }
+
     return(
         <>
          <Menu />
@@ -42,7 +55,7 @@ function contato(){
              
              <br />
              
-             <button className="btn btn-dark" >Enviar</button>
+             <button className="btn btn-dark" onClick = {enviar} >Enviar</button>
              <br/>
              <br/>
              <h2> SAC: 0800 710 3244  </h2>

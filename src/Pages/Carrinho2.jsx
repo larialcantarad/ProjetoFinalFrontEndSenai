@@ -21,7 +21,7 @@ function carrinho2(){
         axios.get("https://bd-user-qimz.onrender.com/usuarios2/"+id)
         .then(res => setData(res.data))
         .catch(err => console.log(err))
-    })
+    },[])
         //  
          //     const calcularTotal = () => {
         //       return (data.valor * val).toLocaleString('pt-BR',
@@ -69,7 +69,8 @@ function carrinho2(){
                                 <div>R$ {data.valor*res},00 </div>
                                     
         </div> 
-        <Link to="../Pages/pagamento" className='btn btn-dark'>Comprar</Link>
+        {/* <Link to="../Pages/pagamento" className='btn btn-dark'>Comprar</Link> */}
+        <Link to="/pagamento" className='btn btn-dark'>comprar</Link>
 
         
         

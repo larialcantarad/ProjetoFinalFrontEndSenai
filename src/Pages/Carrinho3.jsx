@@ -17,17 +17,11 @@ function carrinho3(){
     const [res, setTotal] = useState(0)
 
     useEffect(() => {
-        axios.get("https://bd-user-qimz.onrender.com/produtos/"+id)
+        axios.get("https://bd-user-qimz.onrender.com/produtos/")
         .then(res => setData(res.data))
         .catch(err => console.log(err))
-    })
-        //  
-         //     const calcularTotal = () => {
-        //       return (data.valor * val).toLocaleString('pt-BR',
-         //     {style: "exurrency" , currency: "BRL"})
-        //}
-         //      setTotal(calcularTotal())
-        //}, {val,data})
+    },[])
+        
 
     return(
         <> 
@@ -68,7 +62,8 @@ function carrinho3(){
                                 <div>R$ {data.valor*res},00 </div>
                                     
         </div>
-        <Link to="../Pages/pagamento" className='btn btn-dark'>Comprar</Link> 
+        {/* <Link to="../Pages/pagamento" className='btn btn-dark'>Comprar</Link>  */}
+        <Link to="/pagamento" className='btn btn-dark'>comprar</Link>
 
         </div>    
         <Rodape />     

@@ -15,8 +15,10 @@ import Masculina from './Pages/Masculina'
 import Home from './Pages/home'
 import Add2 from './Pages/Adicionar2'
 import CarrinhoVazio from './Pages/carrinhovazio'
-import Pagamento from './Pages/pagamento'
 import Validacao from './Pages/validacao'
+import Validacao2 from './Pages/validacao2'
+import Validacao3 from './Pages/validacao3'
+import Pagamento from './Pages/pagamento'
 
 
 function AppRouter(){
@@ -42,6 +44,11 @@ function AppRouter(){
                     <Route path="/carrinhovazio" element={<CarrinhoVazio />}></Route>
                     <Route path="/pagamento" element={<Pagamento />}></Route>
                     <Route path="/loginadm" element={<Validacao />}></Route>
+                    <Route path="/loginadm2" element={<Validacao2 />}></Route>
+                    <Route path="/loginadm3" element={<Validacao3 />}></Route>
+                    <Route path="/pagamento" element={<Pagamento />}></Route>
+                    
+                    
               
                   
 

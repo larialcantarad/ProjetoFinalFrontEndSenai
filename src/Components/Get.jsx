@@ -1,22 +1,26 @@
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink, Navigate, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from "react"
 import axios from "axios"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
+import Menu from "./menu"
+import Rodape from "./rodape"
 
 
 function container (){
     const [valor, setValor] = useState([])
-    const navigat = useNavigate()    
+    const navigate = useNavigate()
+       
 
         useEffect(() => {
             axios.get("https://bd-user-qimz.onrender.com/usuarios")
             .then(res => setValor(res.data))
             .catch(err => console.log(err))
-        })
+        },[])
 
     return(
         <>
+        <Menu/>
             <div className="container "><br />
             <h1>Produtos Femininos:</h1>
             <div className='text-end' ><Link to="/criar" className="btn btn-dark">Adicionar</Link></div>
@@ -43,16 +47,9 @@ function container (){
                         <td>{d.cor}</td>
                         <td> <img className="fto" src={d.foto}  /> </td>
                         <td>
-<<<<<<< HEAD
-                        <div className = "botoes">
-                            <div>
-                                <Link to={`/update/${d.id}`} className="btn btn-sm ms-1 btn-success">Atualizar</Link>
-                            </div>
-                            <div>
-                                <button onClick={e => hardSubmit(d.id)} className='btn btn-sm ms-1 btn-danger' >Excluir</button>
-                            </div>
-                        </div>
-=======
+{/* <<<<<<< HEAD */}
+                        
+{/* ======= */}
                             <div className = "botoes">
                                 <div>
                                     <Link to={`/update/${d.id}`} className="btn btn-sm ms-1 btn-success">Atualizar</Link>
@@ -61,7 +58,7 @@ function container (){
                                     <button onClick={e => hardSubmit(d.id)} className='btn btn-sm ms-1 btn-danger' >Excluir</button>
                                 </div>
                             </div>
->>>>>>> 17c72fd028415cd112c06ac359aeb1b78a263780
+{/* >>>>>>> 17c72fd028415cd112c06ac359aeb1b78a263780 */}
                        
                         </td>
                     </tr>
@@ -71,6 +68,7 @@ function container (){
             </tbody>
             </table>
         </div>
+        <Rodape/>
         </>
        
     )
@@ -78,11 +76,11 @@ function container (){
             const conf = window.confirm("Deseja realmente excluir isso???")
             if(conf)
             {
-                axios.delete("http://localhost:3000/usuarios/"+id)
+                axios.delete("https://bd-user-qimz.onrender.com/usuarios/"+id)
                 .then(res => {
-                    alert("Dados excluidos com sucesso!!!")
-                    navigat("/")
-                }).catch(err = console.log(err))
+                    alert("Dados excluídos com sucesso!!!")
+                    navigate("/MNLADM1")
+                }).catch(err => console.log(err))
             }
          }
 

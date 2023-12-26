@@ -26,7 +26,16 @@ function produtos() {
     <div className='mud1'>
     <>
     <Menu />
-    <Carrosel/>
+    <div className = "responsivo">
+      <div className = "container-fluid">
+        <div>
+          <Carrosel/>
+        </div>
+      </div>
+
+    </div>
+    
+    
     <br/>
     <h1 className='let'>Últimas Peças:</h1>
     <div style={{ display: "flex", textAlign:'center',flexWrap: "wrap", gap: "200px" }} >
