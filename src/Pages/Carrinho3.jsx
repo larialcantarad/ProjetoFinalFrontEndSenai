@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { useNavigate, useParams } from "react-router-dom"
-import Mane from '../Components/menu'
 import '././carrinho.css'
 import Menu from '../Components/menu'
 import Rodape from '../Components/rodape'
-import { Link } from "react-router-dom"
 
 
 
@@ -13,7 +11,7 @@ function carrinho3(){
 
     const {id} = useParams()
     const [data, setData] = useState([])
-    const navigat = useNavigate()
+    const navigate = useNavigate()
     const [res, setTotal] = useState(0)
 
     useEffect(() => {
@@ -21,6 +19,12 @@ function carrinho3(){
         .then(res => setData(res.data))
         .catch(err => console.log(err))
     },[])
+
+    function pagar(event){
+        alert("compra realizada com sucesso! número do pedido: 2318")
+        navigate('/')
+
+    }
         
 
     return(
@@ -62,8 +66,57 @@ function carrinho3(){
                                 <div>R$ {data.valor*res},00 </div>
                                     
         </div>
-        {/* <Link to="../Pages/pagamento" className='btn btn-dark'>Comprar</Link>  */}
-        <Link to="/pagamento" className='btn btn-dark'>comprar</Link>
+        <div className = 'formulario'>
+            <div>
+                <h2>Fomas de Pagamento</h2>
+                <img src = "https://i0.wp.com/urucuna.com/wp-content/uploads/2021/02/bandeiras-cartoes-credito.png?ssl=1" className = "imagem" ></img>
+            </div>
+        
+        <form>
+            <div>
+                <h3>Informe os dados do cartão: </h3>
+                <br/>
+                 <label htmlFor="NomeCompleto">Número do cartão: </label><br />
+                 <input type="NomeCompleto" name="NomeCompleto" className="from-control" 
+                 onChange={e=>setInputData({ ...inputData, produto: e.target.value })}
+                 placeholder = "0000 0000 0000 0000"
+                  />
+             </div>
+             <br />
+             <div>
+                 <label htmlFor="E-mail">Nome impresso no cartão:</label><br />
+                 <input type="E-mail" name="E-mail" className="from-control"
+                 onChange={e=>setInputData({ ...inputData, valor: e.target.value })}
+                  />
+                  
+             </div>
+             <br />
+             
+             <div>
+                 <label htmlFor="E-mail">cpf do titular:</label><br />
+                 <input type="E-mail" name="E-mail" className="from-control"
+                 onChange={e=>setInputData({ ...inputData, valor: e.target.value })}
+                 placeholder = "999.999.999-99"
+                  />
+                  
+             </div>
+             
+            <br />
+             
+             <br />
+             
+             <button className="btn btn-dark" onClick = {pagar} >Comprar</button>
+             <br/>
+             <br/>
+             <h2> SAC: 0800 710 3244  </h2>
+           
+             <input type="hidden" name="accessKey" value=' 3bd74ced-c596-4d47-beb7-d91b7de9214e'/>
+             <input type="hidden" name="redirectTo" value=""/>
+
+         </form>
+         
+           <br/>
+        </div>   
 
         </div>    
         <Rodape />     

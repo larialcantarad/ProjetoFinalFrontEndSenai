@@ -32,3 +32,9 @@
     padding:7px;
     
 }
+.imagem{
+    min-width: 100px;
+    max-width: 300px;
+    height: 50%;
+
+}

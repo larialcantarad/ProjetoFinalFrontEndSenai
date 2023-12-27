@@ -15,7 +15,7 @@ function carrinho(){
 
     const {id} = useParams()
     const [data, setData] = useState([])
-    const navigat = useNavigate()
+    const navigate = useNavigate()
     const [res, setTotal] = useState(0)
 
    
@@ -28,7 +28,7 @@ console.log(res)
 
     function pagar(event){
         alert("compra realizada com sucesso! número do pedido: 2318")
-        navigat('/')
+        navigate('/')
 
     }
  
@@ -77,7 +77,7 @@ console.log(res)
         <div className = 'formulario'>
             <div>
                 <h2>Fomas de Pagamento</h2>
-                <img src = "../../public/cartoescerto.png" className = "imagem" ></img>
+                <img src = "https://i0.wp.com/urucuna.com/wp-content/uploads/2021/02/bandeiras-cartoes-credito.png?ssl=1" className = "imagem" ></img>
             </div>
         
         <form>
