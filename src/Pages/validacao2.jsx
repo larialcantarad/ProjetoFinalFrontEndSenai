@@ -11,19 +11,19 @@ function validacao2 (){
         //variaveis useStates, navigates, funções
         const [valor1, setData1] = useState()
         const [valor2, setData2] = useState()
-        const navigat = useNavigate()
+        const navigate = useNavigate()
 
         function validar(event){
             event.preventDefault() 
             if(valor1 == "larissa.demetrio@aluno.senai.br" && valor2 == "1234")
             {
                 alert("Login com sucesso!")
-                navigat('/MNLADM2')
+                navigate('/MNLADM2')
             }
             else
             {
                 alert("Dados inválidos digite novamente!!")
-                navigat('/loginadm')
+                navigate('/loginadm')
             }
         }
 
